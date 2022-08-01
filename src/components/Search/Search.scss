@@ -1,0 +1,28 @@
+.search {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 50vw;
+
+  &__input {
+    height: 5vh;
+    width: 50vw;
+    min-width: 460px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 137.69%;
+    padding-left: 1.4vw;
+    color: #B3B7BF;
+    background: #5A5C66;
+    border: 0;
+  }
+
+  &__icon {
+    margin-left: -5%;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
