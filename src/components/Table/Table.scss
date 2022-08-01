@@ -16,13 +16,18 @@ table {
     line-height: 137.69%;
     color: #FFFFFF;
 
+
     th {
+      &:hover {
+        cursor: pointer;
+      }
+
       img {
         margin-left: 3vw;
         margin-right: 10%;
       }
-      &:hover {
-        cursor: pointer;
+      .desc {
+        transform: rotate(180deg);
       }
     }
   }
@@ -41,7 +46,6 @@ table {
         color: #474955;
       }
     }
-    
   }
 
   .table__id-column {

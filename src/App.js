@@ -10,15 +10,14 @@ import { useEffect, useState } from 'react';
 function App() {
   const [currentPage, setCurrentPage] = useState(1)
   const [filter, setFilter] = useState('')
-  const [filteredData, setFilteredData] = useState(data)
+  const [parsedData, setParsedData] = useState(data)
   const [sortBy, setSortBy] = useState('')
   const [sortAsc, setSortAsc] = useState(false)
   
-  /* При выборе колонки для сортировки в стейте sortBy ещё 1 клик будет старое значение */
-
   useEffect(() => {
+    let filteredData = parsedData
     if (!filter) {
-      setFilteredData(data)
+      filteredData = data
     } 
     else {
       let filtered = data.filter(item => 
@@ -26,75 +25,27 @@ function App() {
         item.title.indexOf(filter) != -1 || 
         item.description.indexOf(filter) != -1)
   
-      setFilteredData(filtered)
+        filteredData = filtered
     }
 
-    console.log(sortBy)
-    console.log(sortAsc)
-    console.log(filteredData)
-    switch (sortBy) {
-      case 'id':
-        sortById(sortAsc)
-        break
-      case 'title':
-        sortByTitle(sortAsc)
-        break
-      case 'description':
-        sortByDescription(sortAsc)
+    let sortedData = [...filteredData]
+    sortedData.sort((a, b) => {
+      return a[sortBy] > b[sortBy] ? 1 : -1;
+    });
+
+    if (!sortAsc) {
+      sortedData.reverse()
     }
-  }, [filter, sortBy, sortAsc, setSortBy, setSortAsc])
 
-  const sortById = (asc) => {
-    filteredData.sort((a,b) => {
-      return a.id - b.id
-    })
+    setParsedData(sortedData);
+  }, [filter, sortBy, sortAsc])
 
-    if (!asc) {
-      filteredData.reverse()
-    }
-  }
-
-  const sortByTitle = (asc) => {
-    filteredData.sort(compareTitle)
-
-    if (!asc) {
-      filteredData.reverse()
-    }
-  }
-
-  const sortByDescription = (asc) => {
-    filteredData.sort(compareDescription)
-
-    if (!asc) {
-      filteredData.reverse()
-    }
-  }
-
-  const compareTitle = (a, b) => {
-    if ( a.title < b.title ){
-      return -1;
-    }
-    if ( a.title > b.title ){
-      return 1;
-    }
-    return 0;
-  }
-  const compareDescription = (a, b) => {
-    if ( a.description < b.description ){
-      return -1;
-    }
-    if ( a.description > b.description ){
-      return 1;
-    }
-    return 0;
-  }
-
-
+ 
   return (
     <div className='container'>
       <Search setFilter={setFilter}/>
       <Table 
-        data={filteredData} 
+        data={parsedData} 
         currentPage={currentPage} 
         setSortBy={setSortBy}
         sortAsc={sortAsc}
@@ -103,10 +54,9 @@ function App() {
       <Pages 
         currentPage={currentPage} 
         setCurrentPage={setCurrentPage} 
-        maxPage={Math.ceil(filteredData.length/10)}
+        maxPage={Math.ceil(parsedData.length/10)}
       />
     </div>
-   
   );
 }
 

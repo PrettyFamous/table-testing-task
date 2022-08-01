@@ -15,17 +15,20 @@ const Table = (
   const setSort = (sortBy) => {
     setSortBy(sortBy)
     setSortAsc(!sortAsc)
+
+    const arrow = document.getElementById(sortBy)
+    sortAsc ? arrow.classList.add('desc') : arrow.classList.remove('desc')
   }
 
 
   return (
     <>
-      <table className='table'>
+      <table>
         <thead>
           <tr>
-            <th width="10%" onClick={() => setSort('id')}>ID<img src={sort}/></th>
-            <th width="50%" onClick={() => setSort('title')}>Заголовок<img src={sort}/></th>
-            <th width="40%" onClick={() => setSort('description')}>Описание<img src={sort}/></th>
+            <th width="10%" onClick={() => setSort('id')}>ID<img id='id' src={sort}/></th>
+            <th width="50%" onClick={() => setSort('title')}>Заголовок<img id='title' src={sort}/></th>
+            <th width="40%" onClick={() => setSort('description')}>Описание<img id='description' src={sort}/></th>
           </tr>
         </thead>
         <tbody>
