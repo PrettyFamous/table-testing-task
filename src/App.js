@@ -16,6 +16,7 @@ function App() {
   
   useEffect(() => {
     let filteredData = parsedData
+
     if (!filter) {
       filteredData = data
     } 
@@ -25,7 +26,7 @@ function App() {
         item.title.indexOf(filter) != -1 || 
         item.description.indexOf(filter) != -1)
   
-        filteredData = filtered
+      filteredData = filtered
     }
 
     let sortedData = [...filteredData]

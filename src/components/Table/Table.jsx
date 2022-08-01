@@ -1,4 +1,3 @@
-import { useEffect } from 'react'
 import { sort } from '../../assets/img'
 
 import './Table.scss'
@@ -40,8 +39,7 @@ const Table = (
                   <td>{item.title}</td>
                   <td>{item.description}</td>
                 </tr>
-              )
-        }
+              )}
         </tbody>
       </table>
       {!data.length && <div className='dataNotFound'>Ничего не найдено</div>}

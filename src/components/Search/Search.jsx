@@ -8,7 +8,12 @@ const Search = ({setFilter}) => {
 
   return (
     <header className='search'>
-      <input className='search__input' placeholder='Поиск' onChange={(e) => setValue(e.target.value)} onSubmit={() => setFilter(value)}/>
+      <input 
+        className='search__input' 
+        placeholder='Поиск' 
+        onChange={(e) => setValue(e.target.value)} 
+        onSubmit={() => setFilter(value)}
+      />
       <img className='search__icon' src={search} onClick={() => setFilter(value)}/>
     </header>
   )

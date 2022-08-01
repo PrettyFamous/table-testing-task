@@ -37,7 +37,6 @@ const Pages = ({currentPage, setCurrentPage, maxPage}) => {
   }
 
 
-
   return (
     <footer className='pages'>
       <button className='button__selector' onClick={decPage}>Назад</button>
