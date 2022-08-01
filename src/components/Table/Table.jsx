@@ -37,7 +37,7 @@ const Table = (
                 <tr key={index}>
                   <td className='table__id-column'>{item.id}</td>
                   <td>{item.title}</td>
-                  <td>{item.description}</td>
+                  <td>{item.body}</td>
                 </tr>
               )}
         </tbody>
