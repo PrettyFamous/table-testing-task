@@ -9,9 +9,9 @@ https://table-testing-task.herokuapp.com/table
 
 Вёрстка адаптивная (мобилки в макете не было, а пытаться сжать таблицу с большим кол-вом текста до размеров мобилки не самая лучшая идея)
 
-## Другой пример работы с полноценной мобилкой вы можете посмотреть на хостинге:
-https://support-service-frontend.herokuapp.com/claims
+## Другой пример работы с полноценной мобилкой:
+На хостинге: https://support-service-frontend.herokuapp.com/claims
 
 Или в репозиториях:
-https://github.com/PrettyFamous/support-service-front 
+https://github.com/PrettyFamous/support-service-front \n
 https://github.com/PrettyFamous/support-service-backend
