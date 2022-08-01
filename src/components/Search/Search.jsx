@@ -12,9 +12,9 @@ const Search = ({setFilter}) => {
         className='search__input' 
         placeholder='Поиск' 
         onChange={(e) => setValue(e.target.value)} 
-        onSubmit={() => setFilter(value)}
+        onSubmit={() => setFilter(value.trim())}
       />
-      <img className='search__icon' src={search} onClick={() => setFilter(value)}/>
+      <img className='search__icon' src={search} onClick={() => setFilter(value.trim())}/>
     </header>
   )
 }
