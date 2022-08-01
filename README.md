@@ -1,5 +1,5 @@
 # Тестовое задание для компании "Сектор Бизнеса"
-Клиент на хостинге (если долго не открывали, запуск может занять до минуты, т.к. хостинг сворачивает неиспользуемые бесплатные приложения):
+Клиент на хостинге (если долго не открывали, запуск может занять до минуты, т.к. хостинг сворачивает неиспользуемые бесплатные приложения):<br />
 https://table-testing-task.herokuapp.com/table
 
 
@@ -10,8 +10,9 @@ https://table-testing-task.herokuapp.com/table
 Вёрстка адаптивная (мобилки в макете не было, а пытаться сжать таблицу с большим кол-вом текста до размеров мобилки не самая лучшая идея)
 
 ## Другой пример работы с полноценной мобилкой:
-На хостинге: https://support-service-frontend.herokuapp.com/claims
+На хостинге: <br />
+https://support-service-frontend.herokuapp.com/claims
 
-Или в репозиториях:
+Или в репозиториях:<br />
 https://github.com/PrettyFamous/support-service-front <br />
 https://github.com/PrettyFamous/support-service-backend
