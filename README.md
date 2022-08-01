@@ -13,5 +13,5 @@ https://table-testing-task.herokuapp.com/table
 На хостинге: https://support-service-frontend.herokuapp.com/claims
 
 Или в репозиториях:
-https://github.com/PrettyFamous/support-service-front \n
+https://github.com/PrettyFamous/support-service-front <br />
 https://github.com/PrettyFamous/support-service-backend
